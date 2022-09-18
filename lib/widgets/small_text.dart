@@ -6,13 +6,15 @@ class SmallText extends StatelessWidget {
   final String text;
   final double size;
   final double heigth;
+  final FontWeight fontWeight;
 
   const SmallText({
     Key? key,
     this.color = const Color(0xffccc7c5),
     required this.text,
-    this.size = 14.0,
+    this.size = 12.0,
     this.heigth = 1.2,
+    this.fontWeight = FontWeight.normal,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -22,6 +24,7 @@ class SmallText extends StatelessWidget {
         color: color,
         fontSize: size,
         height: heigth,
+        fontWeight: fontWeight,
       ),
     );
   }
