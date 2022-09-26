@@ -1,3 +1,5 @@
+import 'package:delivery_food/pages/food/food_detail.dart';
+import 'package:delivery_food/pages/food/recommended_food_detail.dart';
 import 'package:delivery_food/utils/app_colors.dart';
 import 'package:delivery_food/utils/dimentions.dart';
 import 'package:delivery_food/data/path_images.dart';
@@ -47,11 +49,18 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             controller: pageController,
             itemCount: data.length,
             itemBuilder: (context, index) {
-              return PageItems(
-                index: index,
-                currentPageValue: _currentPageValue,
-                scaleFactor: _scaleFactor,
-                height: _height,
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const FoodDetail();
+                  }));
+                },
+                child: PageItems(
+                  index: index,
+                  currentPageValue: _currentPageValue,
+                  scaleFactor: _scaleFactor,
+                  height: _height,
+                ),
               );
             },
           ),
@@ -79,7 +88,11 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           height: Dimentions.height20,
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return const RecommendedFoodDetail();
+            }));
+          },
           child: const ListOfFood(),
         ),
       ],

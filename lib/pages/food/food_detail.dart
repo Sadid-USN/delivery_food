@@ -7,7 +7,6 @@ import 'package:delivery_food/widgets/description_text.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/detail_bottom_sheet.dart';
 
-//! 4:05
 class FoodDetail extends StatelessWidget {
   const FoodDetail({Key? key}) : super(key: key);
   @override
@@ -37,9 +36,30 @@ class FoodDetail extends StatelessWidget {
             top: Dimentions.iconSize,
             left: Dimentions.width10,
             right: Dimentions.width10,
-            child: const AppIcon(
-              icon1: Icons.arrow_back_ios,
-              icon2: Icons.shopping_cart_outlined,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                AppIcon(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                  height: 40,
+                  width: 40,
+                  bgColor: AppColors.mainColor,
+                  iconColor: AppColors.whiteColor,
+                  isPadding: true,
+                  icon: Icons.arrow_back_ios,
+                ),
+                AppIcon(
+                  onTap: () {},
+                  height: 40,
+                  width: 40,
+                  bgColor: AppColors.mainColor,
+                  iconColor: AppColors.whiteColor,
+                  isPadding: true,
+                  icon: Icons.shopping_cart_outlined,
+                ),
+              ],
             ),
           ),
           // Detail of food

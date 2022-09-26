@@ -3,7 +3,7 @@ import 'package:delivery_food/utils/dimentions.dart';
 import 'package:delivery_food/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
-//! 4:30
+//! 5:01
 class DescriptionCollapseText extends StatefulWidget {
   final String text;
   const DescriptionCollapseText({
@@ -86,7 +86,7 @@ class _DescriptionCollapseTextState extends State<DescriptionCollapseText> {
                 ),
                 const SizedBox(
                   height: 8.0,
-                )
+                ),
               ],
             ),
     );
